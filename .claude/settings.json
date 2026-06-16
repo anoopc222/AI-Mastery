@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"C:\\Users\\anoop\\OneDrive\\Desktop\\Anoop-Claude\" && git add -A && git diff --cached --quiet || git commit -m \"auto: update app files\" && git push origin main",
+            "shell": "powershell",
+            "timeout": 60,
+            "statusMessage": "Committing and pushing to GitHub..."
+          }
+        ]
+      }
+    ]
+  }
+}
