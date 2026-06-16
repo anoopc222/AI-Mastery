@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Mastery Roadmap — 60 Days to Pro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-mark">⬡</span>
+        <span class="logo-text">AI Mastery</span>
+      </div>
+      <nav class="top-nav">
+        <a href="#overview">Overview</a>
+        <a href="#week-by-week">Schedule</a>
+        <a href="#resources">Resources</a>
+        <a href="#tools">Tools</a>
+      </nav>
+      <button class="progress-btn" onclick="toggleProgress()">My Progress</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">60-Day Program · 2 hrs/day · From Zero to Pro</div>
+      <h1 class="hero-title">
+        Master <em>Artificial Intelligence</em><br/>from Ground Up
+      </h1>
+      <p class="hero-sub">A structured, daily plan that takes you from absolute beginner to production-ready AI engineer. Every concept, every tool, every framework — with direct links, no fluff.</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-n">60</span><span class="stat-l">Days</span></div>
+        <div class="stat"><span class="stat-n">8</span><span class="stat-l">Modules</span></div>
+        <div class="stat"><span class="stat-n">120+</span><span class="stat-l">Hours</span></div>
+        <div class="stat"><span class="stat-n">200+</span><span class="stat-l">Concepts</span></div>
+      </div>
+      <div class="progress-ring-wrap">
+        <div class="progress-overview">
+          <canvas id="progressRing" width="120" height="120"></canvas>
+          <div class="ring-label">
+            <span id="progressPct">0%</span>
+            <small>complete</small>
+          </div>
+        </div>
+        <button class="start-btn" onclick="document.getElementById('week-by-week').scrollIntoView({behavior:'smooth'})">Start Learning →</button>
+      </div>
+    </div>
+    <div class="hero-grid-bg"></div>
+  </section>
+
+  <!-- HOW TO USE -->
+  <section class="how-to" id="overview">
+    <div class="container">
+      <h2 class="section-title">How to Use This Roadmap</h2>
+      <div class="how-grid">
+        <div class="how-card">
+          <span class="how-icon">📖</span>
+          <h3>Read the Concept</h3>
+          <p>Each day starts with tight bullet points. Read them first — they're the mental model you need before anything else.</p>
+        </div>
+        <div class="how-card">
+          <span class="how-icon">▶️</span>
+          <h3>Watch the Video</h3>
+          <p>1–2 curated YouTube links per day. Watch at 1.25× speed. Pause when you need to — never rush comprehension.</p>
+        </div>
+        <div class="how-card">
+          <span class="how-icon">💻</span>
+          <h3>Code It Out</h3>
+          <p>Every concept has a practical mini-project. 20 lines of code beats 2 hours of passive watching every time.</p>
+        </div>
+        <div class="how-card">
+          <span class="how-icon">✅</span>
+          <h3>Mark & Reflect</h3>
+          <p>Check the day done. Write 5 bullet takeaways in a notebook. Can you explain it to someone else? If not, re-read.</p>
+        </div>
+      </div>
+      <div class="daily-schedule">
+        <h3>Daily 2-Hour Block</h3>
+        <div class="schedule-blocks">
+          <div class="sblock" style="--c:#6366f1">
+            <span class="sblock-time">15 min</span>
+            <span class="sblock-label">Review yesterday</span>
+          </div>
+          <div class="sblock" style="--c:#8b5cf6">
+            <span class="sblock-time">50 min</span>
+            <span class="sblock-label">Read + Watch</span>
+          </div>
+          <div class="sblock" style="--c:#0ea5e9">
+            <span class="sblock-time">40 min</span>
+            <span class="sblock-label">Code / Practice</span>
+          </div>
+          <div class="sblock" style="--c:#10b981">
+            <span class="sblock-time">15 min</span>
+            <span class="sblock-label">Write Summary</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULES OVERVIEW -->
+  <section class="modules-overview">
+    <div class="container">
+      <h2 class="section-title">8-Module Curriculum</h2>
+      <div class="modules-grid">
+        <div class="module-card" onclick="scrollToModule('module-1')">
+          <span class="mod-week">Week 1–2</span>
+          <h3>Module 1</h3>
+          <p>AI, ML & DL Foundations</p>
+          <span class="mod-days">Days 1–10</span>
+        </div>
+        <div class="module-card" onclick="scrollToModule('module-2')">
+          <span class="mod-week">Week 2–3</span>
+          <h3>Module 2</h3>
+          <p>Python for AI & Data</p>
+          <span class="mod-days">Days 11–18</span>
+        </div>
+        <div class="module-card" onclick="scrollToModule('module-3')">
+          <span class="mod-week">Week 3–4</span>
+          <h3>Module 3</h3>
+          <p>LLMs & Transformers</p>
+          <span class="mod-days">Days 19–26</span>
+        </div>
+        <div class="module-card" onclick="scrollToModule('module-4')">
+          <span class="mod-week">Week 4–5</span>
+          <h3>Module 4</h3>
+          <p>Prompt Engineering & APIs</p>
+          <span class="mod-days">Days 27–33</span>
+        </div>
+        <div class="module-card" onclick="scrollToModule('module-5')">
+          <span class="mod-week">Week 5–6</span>
+          <h3>Module 5</h3>
+          <p>RAG Systems</p>
+          <span class="mod-days">Days 34–41</span>
+        </div>
+        <div class="module-card" onclick="scrollToModule('module-6')">
+          <span class="mod-week">Week 6–7</span>
+          <h3>Module 6</h3>
+          <p>AI Agents & Tools</p>
+          <span class="mod-days">Days 42–50</span>
+        </div>
+        <div class="module-card" onclick="scrollToModule('module-7')">
+          <span class="mod-week">Week 7–8</span>
+          <h3>Module 7</h3>
+          <p>Deployment & MLOps</p>
+          <span class="mod-days">Days 51–56</span>
+        </div>
+        <div class="module-card" onclick="scrollToModule('module-8')">
+          <span class="mod-week">Week 8</span>
+          <h3>Module 8</h3>
+          <p>Ethics, Projects & Career</p>
+          <span class="mod-days">Days 57–60</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEEK-BY-WEEK CONTENT -->
+  <section class="curriculum" id="week-by-week">
+    <div class="container" id="days-container">
+      <!-- JS renders all days here -->
+    </div>
+  </section>
+
+  <!-- RESOURCES SECTION -->
+  <section class="resources-section" id="resources">
+    <div class="container">
+      <h2 class="section-title">Master Resource Library</h2>
+      <div class="resource-grid" id="resources-grid">
+        <!-- JS renders -->
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS SECTION -->
+  <section class="tools-section" id="tools">
+    <div class="container">
+      <h2 class="section-title">Essential AI Tools & Platforms</h2>
+      <div class="tools-grid" id="tools-grid">
+        <!-- JS renders -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRESS PANEL -->
+  <div class="progress-panel" id="progressPanel">
+    <div class="pp-header">
+      <h3>My Learning Progress</h3>
+      <button onclick="toggleProgress()">✕</button>
+    </div>
+    <div class="pp-body">
+      <div class="pp-summary">
+        <div class="pp-stat">
+          <span id="ppDone">0</span>
+          <small>Days Done</small>
+        </div>
+        <div class="pp-stat">
+          <span id="ppLeft">60</span>
+          <small>Days Left</small>
+        </div>
+        <div class="pp-stat">
+          <span id="ppPct2">0%</span>
+          <small>Complete</small>
+        </div>
+      </div>
+      <div class="pp-grid" id="ppGrid"></div>
+      <button class="reset-btn" onclick="resetProgress()">Reset Progress</button>
+    </div>
+  </div>
+  <div class="overlay" id="overlay" onclick="toggleProgress()"></div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>AI Mastery Roadmap · Built for serious learners · 2025–2026</p>
+      <p class="footer-sub">Depth beats speed. Build, don't just watch. Teach to truly learn.</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
